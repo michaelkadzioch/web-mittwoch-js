@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px;
+    gap: 20px;
+}
+
+.gridbox {
+    background-color: crimson;
+    padding: 8px;
+    border-radius: 8px;
+    min-height: 20px;
+}
