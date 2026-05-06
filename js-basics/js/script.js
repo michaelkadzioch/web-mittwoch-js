@@ -1,56 +1,62 @@
-function output(wert_von_aussen) {
-    let ausgabetext;
+function output() {
+    let ausgabetext = '';
 
-    ausgabetext = 'Hallo ';
-    ausgabetext += wert_von_aussen;
+    // for-Schleife wiederholt eine Code innerhalb der { }
+    for (let counter = 0; counter < 10; counter++) {
+        ausgabetext += 'Hallo Welt! <br>';
+    }
 
     document.getElementById('js-output').innerHTML = ausgabetext;
 }
+
+
 
 function output3() {
-    let text1;
-    let text2;
-    let ausgabetext;
+    const zahl1 = 50;
+    const zahl2 = 50;
 
-    text1 = 'Hallo';
-    text2 = 'Welt!';
+    // Checken, ob zahl1 und zahl2 gleich sind
+    // Anwort ist IMMER 1 oder 0, ja oder nein, wahr oder falsch   
+    // wenn ja dann if
+    // 1. Frage / Bedingung
+    if (zahl1 > zahl2) {
+        document.getElementById('js-output').innerHTML = 'zahl 1 ist größer';
+    }
 
-    // Verketten der Strings
-    ausgabetext = text1 + ' ' + text2;
+    // 2. Frage / Bedingung (wichtig == als Vergleich)
+    else if (zahl1 == zahl2) {
+        document.getElementById('js-output').innerHTML = 'zahl 1 und zahl 2 sind gleich';
+    }
 
-    document.getElementById('js-output').innerHTML = ausgabetext;
+    // sonst else
+    else {    
+        document.getElementById('js-output').innerHTML = 'zahl 2 ist größer';
+    }
 }
 
+
+
 function output2() {
-    let zahl1;
-    let zahl2;
-    let ergebnis;
+    const zahl1 = 30;
+    const zahl2 = 45;
 
-    zahl1 = 10;
-    zahl2 = 5;
+    // Checken, ob zahl1 und zahl2 gleich sind
+    // Anwort ist IMMER 1 oder 0, ja oder nein, wahr oder falsch
+    // wenn ja dann if
+    if(zahl1 > zahl2) {
+        document.getElementById('js-output').innerHTML = zahl1;
+    }
 
-    // Erst wird gerechnet, dann wird zugewiesen
-    ergebnis = zahl1 + zahl2; 
-
-    // Erst wird gerechnet, dann wird zugewiesen
-    // ergebnis = ergebnis + 3; 
-    
-    // Kurzere Syntax in JS
-    ergebnis += 3;
-
-    document.getElementById('js-output').innerHTML = ergebnis;
+    // sonst else
+    else {
+        document.getElementById('js-output').innerHTML = zahl2;
+    }
 }
 
 
 function output1() {
-    // Variable wird definiert
-    let ausgabetext;
-
-    // Variable initalisieren
-    ausgabetext = 'Hallo Welt!';
-
-    // Variable überschreiben
-    ausgabetext = 'Ich bin ein neuer Text!';
+    // das ist eine Konstante
+    const ausgabetext = 'Hallo Welt!';
 
     document.getElementById('js-output').innerHTML = ausgabetext;
 }
