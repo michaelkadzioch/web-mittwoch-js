@@ -1,9 +1,52 @@
 function output() {
+    // Fibonacci-Folge
+    let ausgabetext = '';
+    zahl1 = 1;
+    zahl2 = 1;
+    ende = 1000;
+    ergebnis = 0;
+
+    while (ergebnis <= ende) {
+        ergebnis = zahl1 + zahl2;
+        zahl1 = zahl2;
+        zahl2 = ergebnis;
+        ausgabetext += 'Ergebnis ist: ' + ergebnis + '<br>';
+    } 
+
+    document.getElementById('js-output').innerHTML = ausgabetext;
+}
+
+
+
+function output5() {
+    let ausgabetext = '';
+    anfang = 5;
+    ende = 117;
+
+    ergebnis = anfang;
+    while (ergebnis <= ende) {
+        ausgabetext += 'Ergebnis ist: ' + ergebnis + '<br>';
+        ergebnis = ergebnis * 3;
+
+        if (ergebnis < anfang) {
+            break; // Notbremse
+        }
+    } 
+
+    document.getElementById('js-output').innerHTML = ausgabetext;
+}
+
+
+function output4() {
     let ausgabetext = '';
 
     // for-Schleife wiederholt eine Code innerhalb der { }
     for (let counter = 0; counter < 10; counter++) {
-        ausgabetext += 'Hallo Welt! <br>';
+        ausgabetext += 'Hallo Welt! ' + counter + '<br>';
+
+        if(counter < 0){
+            break; // Notbremse
+        }
     }
 
     document.getElementById('js-output').innerHTML = ausgabetext;
