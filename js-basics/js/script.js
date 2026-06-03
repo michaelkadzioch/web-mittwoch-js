@@ -1,6 +1,6 @@
 function output() {
     
-    let buttons = ['Home', 'About', 'Hilfe', 'Contact', 'Services', 'Blog'];
+    let buttons = ['Home', 'Shop', 'About', 'Hilfe', 'Contact', 'Services', 'Blog'];
     let ausgabe = '';
 
     for (let i = 0; i < buttons.length; i++) {

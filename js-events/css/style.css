@@ -16,6 +16,18 @@ body {
     border-radius: 8px;
 }
 
+.box2 {
+    background-color: green;
+    margin: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .btn {
     background-color: purple;
     color: white;
