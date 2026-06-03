@@ -1,39 +1,49 @@
 function output() {
-    let zahl1;
-    let zahl2;
-    let ergebnis;
+    
+    let buttons = ['Home', 'About', 'Hilfe', 'Contact', 'Services', 'Blog'];
+    let ausgabe = '';
 
-    zahl1 = 20;
-    zahl2 = 4;
-
-    // ergebnis = plusRechnen(zahl1, zahl2);
-
-    ergebnis = dividierenMitFehlererkennung(zahl1, zahl2);
-
-    document.getElementById('js-output').innerHTML = ergebnis;
-}
-
-
-function dividierenMitFehlererkennung(a, b) {
-    // Wenn B = 0 dann FEhlermedlung ausgeben "Man kann nicht durch 0 teilen!"
-    // ansonsten Rechnen
-    let rechnung;
-
-    // Wenn b ungleich 0 dann rechnen
-    if (b != 0) {
-        rechnung = a / b;
-    } else {
-        rechnung = "Man kann nicht durch 0 teilen!";
+    for (let i = 0; i < buttons.length; i++) {
+        ausgabe += '<div class="btn">';
+        ausgabe += buttons[i];
+        ausgabe += '</div>';
     }
 
-    return rechnung;
+    document.getElementById('js-output').innerHTML =  ausgabe;
 }
 
 
-function plusRechnen(a, b) {
-    let summe;
+function output1() {
+    // Arbeiten mit Arrays
+    // let ausgabe;
+    // ausgabe = dummyRechung();
+    // document.getElementById('js-output').innerHTML = 'Ergebnis: ' + ausgabe[0] + '<br>Rest: ' + ausgabe[1];
 
-    summe = a + b;
+    let cars = ['BMW', 'Mercedes', 'Audi', 'Ford', 'Toyota', 'Honda', 'Nissan', 'Volkswagen'];
 
-    return summe;
+    let ausgabe = '';
+
+    ausgabe += 'In meiner Garage stehen diese Fahrzeuge:<br>';
+
+    // für jedes Element in der Liste eine Ausgabe machen
+    for (let i = 0; i < cars.length; i++) {
+        ausgabe += cars[i] + '<br>';
+    }
+
+    ausgabe += 'Anzahl Fahrzeuge: ';
+    ausgabe += cars.length + '<br>';
+
+    document.getElementById('js-output').innerHTML =  ausgabe;
+}
+
+
+function dummyRechung() {
+    // hier wird irgendwas gerechnet
+
+    let ergebnis = 7;
+    let rest = 3;
+
+    let liste = [ergebnis, rest];
+
+    return liste;
 }
