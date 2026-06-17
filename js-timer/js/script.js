@@ -1,6 +1,8 @@
-setTimeout(output, 5000);
+let zahl = 0;
+
+setInterval(output, 3000);
 
 function output() {
-    let outputText = 'Hallo Welt!';
-    document.getElementById('js-output').innerHTML = outputText;
+    document.getElementById('js-output').innerHTML = zahl;
+    zahl += 1;
 }
